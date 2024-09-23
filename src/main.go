@@ -5,14 +5,17 @@ import (
 	"ws-go/src/server"
 )
 
-
 const (
 	HOST = "localhost"
 	PORT = "8080"
+	CERT_FILE = "server.crt"
+	KEY_FILE = "server.key"
 )
 
-func main(){	
+func main() {
 	srv := server.New(HOST, PORT)
-	srv.Run()
+	if err := srv.Run(CERT_FILE, KEY_FILE); err != nil {
+		fmt.Println("Error al iniciar el servidor:", err)
+	}
 	fmt.Println("Hello, CompileDaemon!")
 }

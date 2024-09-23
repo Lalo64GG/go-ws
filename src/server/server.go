@@ -33,7 +33,7 @@ func New(host, port string) Server {
 	return srv
 }
 
-func (s *Server) Run() error {
+func (s *Server) Run(certFile, keyFile string) error {
 	log.Println("Server running on " + s.host + ":" + s.port)
-	return s.engine.Run(s.httpAddr)
+	return s.engine.RunTLS(s.httpAddr, certFile, keyFile)
 }
