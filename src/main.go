@@ -8,8 +8,8 @@ import (
 const (
 	HOST = "localhost"
 	PORT = "8080"
-	CERT_FILE = "server.crt"
-	KEY_FILE = "server.key"
+	CERT_FILE = "/etc/letsencrypt/live/dinoraceroyale.zapto.org/fullchain.pem"
+	KEY_FILE = "/etc/letsencrypt/live/dinoraceroyale.zapto.org/privkey.pem"
 )
 
 func main() {
