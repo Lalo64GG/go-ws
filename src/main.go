@@ -7,8 +7,8 @@ import (
 
 const (
 	HOST = "localhost"
-	PORT = "8080"
-	CERT_FILE = "/etc/letsencrypt/live/dinoraceroyale.zapto.org/fullchain.pem"
+	PORT = "443"
+	CERT_FILE = "/etc/letsencrypt/live/dinoraceroyale.zapto.org/cert.pem"
 	KEY_FILE = "/etc/letsencrypt/live/dinoraceroyale.zapto.org/privkey.pem"
 )
 
